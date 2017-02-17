@@ -3,7 +3,6 @@ var moment = require('moment');
 
 // Booleans
 function isTrue(value) {
-    var value = true;
     return value;
 }
 
@@ -51,7 +50,7 @@ avow('repeatWord returns a repeated word', repeatWord('Knock.', 2) === 'Knock.Kn
 console.log(repeatWord('I want french fries.', 5))
 
 function sliceWord(value, n1, n2) {
-    return value.slice(7, 12)
+    return value.slice(n1, n2)
 }
 
 avow('sliceWord returns a slice of a word', sliceWord('I love pizza!', 7, 12) === 'pizza');
@@ -116,16 +115,13 @@ function isDivisibleByThree(value) {
 
 avow('isDivisibleByThree returns true if number is divisible by 3', isDivisibleByThree(9) === true);
 
-function makeRandomNumber(value) {
-    var value = Math.random(10);
-    return value;
-
-}
-
+function makeRandomNumber(min, max) {
+  return Math.random() * (10 - 0) + 0;
+    }
 avow('makeRandomNumber returns a random number between 0 and 10', makeRandomNumber(10) >= 0 && makeRandomNumber(10) <= 10);
 
 function roundNumber(value) {
-    var value = Math.round(5.51);
+    var value = Math.round(6);
     return value;
 }
 
