@@ -137,15 +137,14 @@ avow('isDivisibleByThree returns true if number is divisible by 3', isDivisibleB
 // ------------------
 
 function makeRandomNumber(value) {
-    return Math.round(Math.random(value) * 10);
+    return Math.round(Math.random() * value);
 }
 avow('makeRandomNumber returns a random number between 0 and 10', makeRandomNumber(10) >= 0 && makeRandomNumber(10) <= 10);
 
 // i had it hard coded so the only numbers it could return were between 0 - 10 but if for some reason the data needed to change it wouldnt be able to because i had a min & a max set. using (value) * 10 returns a number between 1 and 10 randomly every time. 
 // -------------
 function roundNumber(value) {
-    var value = Math.round(6);
-    return value;
+     return Math.round(value);
 }
 
 avow('roundNumber returns a number rounded up', roundNumber(5.51) === 6);
